@@ -2,7 +2,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets charts
 
-CONFIG += c++11 console
+CONFIG += c++11
 OUTPUT += console
 
 # The following define makes your compiler emit warnings if you use
@@ -24,6 +24,7 @@ HEADERS += \
     mainwindow.h
 
 FORMS += \
+    dialog.ui \
     mainwindow.ui
 
 # Default rules for deployment.

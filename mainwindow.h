@@ -7,6 +7,7 @@
 #include <QBarSet>
 #include <QDate>
 #include <QPercentBarSeries>
+#include <QTableWidget>
 
 QT_BEGIN_NAMESPACE
 class QComboBox;
@@ -59,22 +60,23 @@ public:
 
 private Q_SLOTS:
     void updateUI();
+    void updateTheme();
     void nextPage();
+    void previousPage();
 
 private:
-    QBarSet *fillSetVolumes(DataTable data, QString setName) const;
-    QBarSet *fillSetCA(DataTable data, QString setName) const;
     BankersList generateBankersList() const;
     AgenciesList generateAgenciesList() const;
     ClientsList generateClientsList() const;
-    QList<QBarSeries *> generateBarSeries() const;
-    QList<QPercentBarSeries *> generatePercentBarSeries() const;
-    QList<QBarSet *> generateBarSets(DataTable data,int insight) const;
     DataTable generateRandomData() const;
     ProductsTable generateProductsTable() const;
-    QChart *createChart(QBarSeries *series, QString category, int max) const;
-    QChart *createPercentChart(QPercentBarSeries *series, QString title) const;
-    int maxValue() const;
+    void fillTable(DataTable data);
+    QChart* createChart(QBarSeries *series, int max) const;
+    QChart* createPercentChart(QPercentBarSeries *series) const;
+    void generateBarSeries();
+    void generatePercentBarSeries();
+    void generateBarSets(DataTable data,int insight);
+    int maxValue();
     void connectSignals();
 
 private:
@@ -83,10 +85,12 @@ private:
     ClientsList m_clientsList;
     ProductsTable m_productsTable;
     DataTable m_dataTable;
+    DataTable m_curr_dataTable;
     QList<QChart *> m_charts;
     QList<QBarSet *> m_barSets;
     QList<QBarSeries *> m_barSeries;
     QList<QPercentBarSeries *> m_percentBarSeries;
+    QTableWidget * m_table;
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H
