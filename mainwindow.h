@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "dialog.h"
+
 #include <QMainWindow>
 #include <QtCharts/QChartGlobal>
 #include <QBarSeries>
@@ -70,13 +72,13 @@ private:
     ClientsList generateClientsList() const;
     DataTable generateRandomData() const;
     ProductsTable generateProductsTable() const;
-    void fillTable(DataTable data);
-    QChart* createChart(QBarSeries *series, int max) const;
-    QChart* createPercentChart(QPercentBarSeries *series) const;
+    void fillTable(DataTable data, int insight);
+    QChart* createChart(QBarSeries *series, int max);
+    QChart* createPercentChart(QPercentBarSeries *series);
     void generateBarSeries();
     void generatePercentBarSeries();
     void generateBarSets(DataTable data,int insight);
-    int maxValue();
+    int maxValue(int i);
     void connectSignals();
 
 private:
@@ -91,6 +93,10 @@ private:
     QList<QBarSeries *> m_barSeries;
     QList<QPercentBarSeries *> m_percentBarSeries;
     QTableWidget * m_table;
+    Dialog * dialog;
     Ui::MainWindow *ui;
+
+public:
+    QList<int> defaultparams;
 };
 #endif // MAINWINDOW_H

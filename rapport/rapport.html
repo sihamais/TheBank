@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>I&period; Wireframes</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <center>
+<h3>AISSAOUI Siham</h3>
+<h1><b>RAPPORT DE PROJET</b></h1>
+</center>
+<h2 id="i-wireframes">I. Wireframes</h2>
+<h3 id="1-vue-générale">1. Vue générale</h3>
+<p>Voici comment je choisis de représenter la vue globale de l'application :
+<img src="file:////Users/sihamais/Desktop/Courses/IHM/bankstats/rapport/Vue-globale.png" alt="Vue globale">
+La vue globale se compose de trois diagrammes représentants les statistiques de chaque canal. Les 3 diagrammes ne sont pas individuels, ils sont regroupés en un diagramme générale avec un seul axe abscisse et ordonnée, ce qui permet de mieux comparer les données dans les différents canaux. Les canaux sont distingués par leurs noms qui se place en dessous du canal ainsi que d'un espace vide. Le nom du canal bancaire est un bouton cliquable qui permet de passer à la deuxième vue de l'application. Lors du passage de la souris sur ce nom, la couleur du texte change pour que l'utilisateur comprenne que c'est un bouton. Au dessus des barres se trouvent des étiquettes correspondants à la famille que représente la barre. L'étiquette est mise au dessus de la barre pour éviter le chevauchement éventuel des étiquettes si elles étaient en dessous. Si deux barres adjacentes ont à peu près la même valeur, un espace entre les barres est prévu pour éviter la collision de deux étiquettes. Chaque diagramme contient autant de barre que de famille dans le canal. Lors du passage de la souris sur une barre, un pop up s'affiche avec la valeur de la barre dans le diagramme.</p>
+<p>Un menu est à disposition pour modifier des paramêtres d'affichage :</p>
+<ul>
+<li>Une liste de checkbox à choix multiples contenant toutes les agences : L'agence sera préselectionnée en fonction de l'utilisateur. Si l'utilisateur est un directeur d'agence, alors la valeur par défaut sera sont agence. Si c'est le directeur de la banque, alors toutes les agences seront séléctionnées.</li>
+<li>Un date picker intelligent : date cliquable qui affiche un mini calendrier pour choisir une date de début et de fin. Lors de son choix, l'utilisateur peut ensuite avancer ou reculer de la même durée choisie sur le calendrier grâce aux flèches.</li>
+<li>Une liste de checkbox à choix unique permettant d'afficher les données des trois diagrammes en fonction d'un insight. Je choisis d'appliquer ce paramètre aux trois diagrammes en même temps pour des raisons pratiques.</li>
+</ul>
+<p>Je choisis également de permettre à l'utilisateur de choisir entre deux modes visuels :</p>
+<ul>
+<li>Mode <strong>clair</strong> (light mode)</li>
+<li>Mode <strong>sombre</strong> (dark mode)</li>
+</ul>
+<p>Voici le wireframe commenté avec tous les détails évoqués plus haut :
+<img src="file:////Users/sihamais/Desktop/Courses/IHM/bankstats/rapport/Vue-globale-comment%C3%A9e.png" alt="Vue globale commentée"></p>
+<h3 id="2-vue-du-canal-bancaire">2. Vue du canal bancaire</h3>
+<p>La vue du canal bancaire se présente comme ceci :
+<img src="file:////Users/sihamais/Desktop/Courses/IHM/bankstats/rapport/Vue-canal.png" alt="Vue canal bancaire"></p>
+<p>Elle se décompose en trois éléments principaux :</p>
+<ul>
+<li>Une liste d'informations concernant le canal bancaire qui contiendrait des informations sur chaque produit (nom, prix de vente, durée, bénéfices par an...).</li>
+<li>Un diagramme représentant les valeurs du volume ou chiffre d'affaire de chaque produit.</li>
+<li>Un tableau des ventes de chaque banquier avec des informations pratiques comme le nom, l'agence à laquelle il appartient, le volume d'affaire/chiffre d'affaire, le nombre de prospects. On peut classer les banquiers en fonction des colonnes, ce qui permet de receuillir des informations utiles sur leur performance.</li>
+</ul>
+<p>Les informations du diagramme et du tableau sont modifiables depuis le menu de paramètres en haut. On peut visualiser les ventes d'une seule ou plusieurs agences ou de toutes agences confondues en volumes ou en chiffre d'affaire et dans un certain laps de temps.</p>
+<p>On conserve le même menu que pour la première vue, avec la possibilité d'activer ou désactiver le thème sombre. On rajoute un bouton de retour vers la vue précédente pour naviguer entre les vues.</p>
+<p>Voici le wireframe commenté avec tous les détails évoqués plus haut :
+<img src="file:////Users/sihamais/Desktop/Courses/IHM/bankstats/rapport/Vue-canal-comment%C3%A9e.png" alt="Vue globale commentée"></p>
+
+    </body>
+    </html>

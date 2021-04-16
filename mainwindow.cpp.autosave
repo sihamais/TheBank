@@ -330,7 +330,6 @@ QChart *MainWindow::createChart(QBarSeries *series, int max)
     chart->setAnimationDuration(3000);
     chart->legend()->setVisible(true);
     chart->legend()->setAlignment(Qt::AlignBottom);
-
     return chart;
 }
 
