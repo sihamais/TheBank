@@ -22,6 +22,7 @@ Je choisis également de permettre à l'utilisateur de choisir entre deux modes 
 Voici le wireframe commenté avec tous les détails évoqués plus haut :
 ![Vue globale commentée](Vue-globale-commentée.png)
 
+
 ### 2. Vue du canal bancaire
 La vue du canal bancaire se présente comme ceci :
 ![Vue canal bancaire](Vue-canal.png)
