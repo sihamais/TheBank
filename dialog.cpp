@@ -8,6 +8,7 @@ Dialog::Dialog(QWidget *parent) :
     ui->setupUi(this);
     ui->agencyComboBox->hide();
     ui->agencyLabel->hide();
+    this->setWindowTitle("Préférences");
 
     connect(ui->themeComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(updateDialog()));
     connect(ui->fonctionComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(updateDialog()));

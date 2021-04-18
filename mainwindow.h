@@ -10,6 +10,9 @@
 #include <QDate>
 #include <QPercentBarSeries>
 #include <QTableWidget>
+#include <QTreeWidget>
+#include <QListWidgetItem>
+#include <QSettings>
 
 QT_BEGIN_NAMESPACE
 class QComboBox;
@@ -65,6 +68,12 @@ private Q_SLOTS:
     void updateTheme();
     void nextPage();
     void previousPage();
+    void mainPage();
+    void pBankPage();
+    void bankersPage();
+    void preferences();
+    void getBankersNameTable(int y, int x);
+    void getBankersNameList(QListWidgetItem* item);
 
 private:
     BankersList generateBankersList() const;
@@ -73,11 +82,13 @@ private:
     DataTable generateRandomData() const;
     ProductsTable generateProductsTable() const;
     void fillTable(DataTable data, int insight);
+    void fillTree(ProductsTable data);
     QChart* createChart(QBarSeries *series, int max);
     QChart* createPercentChart(QPercentBarSeries *series);
     void generateBarSeries();
     void generatePercentBarSeries();
     void generateBarSets(DataTable data,int insight);
+    void bankersTable(DataTable data, QString name);
     int maxValue(int i);
     void connectSignals();
 
@@ -93,10 +104,11 @@ private:
     QList<QBarSeries *> m_barSeries;
     QList<QPercentBarSeries *> m_percentBarSeries;
     QTableWidget * m_table;
+    QTableWidget * m_bankersTable;
+    QTreeWidget * m_tree;
     Dialog * dialog;
+    QSettings m_settings;
     Ui::MainWindow *ui;
 
-public:
-    QList<int> defaultparams;
 };
 #endif // MAINWINDOW_H
