@@ -30,8 +30,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
     ui->InsightComboBox->setCurrentIndex(0);
-    ui->backButton->hide();
-    ui->horizontalSpacer_8->changeSize(40,20,QSizePolicy::Preferred,QSizePolicy::Preferred);
     connectSignals();
 
     QChart *chart1, *chart2, *chart3 , *chart4;
@@ -153,8 +151,6 @@ void MainWindow::preferences(){
 void MainWindow::nextPage()
 {
     int curr = ui->stackedWidget->currentIndex();
-    ui->backButton->show();
-    ui->horizontalSpacer_8->changeSize(40,20,QSizePolicy::Expanding,QSizePolicy::Fixed);
     ui->stackedWidget->setCurrentIndex(curr+1);
     updateTheme();
 }
@@ -163,11 +159,6 @@ void MainWindow::previousPage()
 {
     int curr = ui->stackedWidget->currentIndex();
     ui->stackedWidget->setCurrentIndex(curr-1);
-    if(curr -1 == 0){
-        ui->backButton->hide();
-        ui->horizontalSpacer_8->changeSize(40,20,QSizePolicy::Fixed,QSizePolicy::Fixed);
-        updateTheme();
-    }
     updateTheme();
 }
 
@@ -432,7 +423,6 @@ void MainWindow::connectSignals()
     connect(ui->toDateEdit, SIGNAL(dateChanged(QDate)), this, SLOT(updateUI()));
     connect(ui->agenciesComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(updateUI()));
     connect(ui->PbanquierBtn, SIGNAL(clicked()), this, SLOT(nextPage()));
-    connect(ui->backButton, SIGNAL(clicked()), this, SLOT(previousPage()));
     connect(ui->pbancaireSalesTable, SIGNAL(cellDoubleClicked(int,int)), this, SLOT(getBankersNameTable(int,int)));
     connect(ui->listWidget, SIGNAL(itemClicked(QListWidgetItem*)), this, SLOT(getBankersNameList(QListWidgetItem*)));
     connect(ui->AcceuilBtn, SIGNAL(clicked()), this, SLOT(mainPage()));
