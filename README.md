@@ -10,11 +10,11 @@ The aim of this application is to combine efficiency and ergonomics in order to 
 
 ### Banking products
 
-![Home page](pb.gif)
+![Banking products](pb.gif)
 
 ### Bankers & preferences
 
-![Home page](bp.gif)
+![Bankers & preferences](bp.gif)
 
 
 
