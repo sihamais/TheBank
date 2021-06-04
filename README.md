@@ -4,3 +4,17 @@ The aim of this application is to combine efficiency and ergonomics in order to 
 
 ## Preview
 
+### Home
+
+![Home page](home.gif)
+
+### Banking products
+
+![Home page](pb.gif)
+
+### Bankers & preferences
+
+![Home page](bp.gif)
+
+
+
